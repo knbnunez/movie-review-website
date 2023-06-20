@@ -1,4 +1,8 @@
-Esto va con Python 3.10
+# Web Critica Peliculas
 
+## Dependencias
 
-Hay librerías demás, hay que hacer un análisis y eliminar las que no van...
+- Python versión: 3.10
+
+## ToDo:
+- Hay librerías demás, hay que hacer un análisis y eliminar las que no van...
