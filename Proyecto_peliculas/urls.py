@@ -35,5 +35,9 @@ urlpatterns = [
     path('directores/detalle/<pk>/', DirectorDetalleTV.as_view(), name = 'director-detalle'),
     path('actores/detalle/<pk>/', ActorDetalleTV.as_view(), name = 'actor-detalle'),
     
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+
+if settings.DEBUG:  
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

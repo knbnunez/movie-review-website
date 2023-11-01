@@ -25,9 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-uj*hcm^yfe#75-z70*06_(_fuu=a_1h8utuue!pd^z!-c!b-=u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', ] # y el resto de IPs que correspondan
 
 
 # Application definition
@@ -125,15 +126,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/var/www/html/static'
+
 STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, 'static')
-    BASE_DIR / "static"
+    os.path.join(BASE_DIR, 'static')
 ]
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
-MEDIA_ROOT = BASE_DIR / "static/images/"
+MEDIA_ROOT = '/var/www/images'
 
-MEDIA_URL = '/images/'
+MEDIA_URL = '/var/www/images'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
